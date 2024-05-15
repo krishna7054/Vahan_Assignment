@@ -1,0 +1,219 @@
+body {
+    background-image: url('../src/assets/wave-haikei.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  h3 {
+    font-style: italic;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    height: 35rem;
+  }
+  
+  .input-wrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 30em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+  
+  .input-wrapper input:focus {
+    outline-color: lightcoral;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #05060f99;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  }
+  
+  .frm {
+    border-radius: 27px;
+    background: linear-gradient(315deg, #1f9de1, #77cce1);
+    box-shadow: -5px -5px 0px #9edcfc, 5px 5px 0px #a2e0ff;
+  }
+  
+  .button {
+    display: inline-flex;
+    padding: 12px 14px;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+  }
+  
+  .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+  }
+  
+  .button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .img {
+    width: 20%;
+    height: 30%;
+    margin-right: 20rem;
+    margin-top: 22rem;
+    rotate: 10deg;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 1200px) {
+
+    body{
+        background-image: url('../src/assets/wave-haikei_tab.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .App {
+      margin-top: 3rem;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .input-wrapper input {
+      width: 25em;
+    }
+  
+    .img {
+      width: 25%;
+      height: auto;
+      margin-right: 0;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    body{
+        background-image: url('../src/assets/wave-haikeimobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    h3 {
+      font-size: large;
+    }
+  
+    .App {
+      margin-top: 2rem;
+      height: auto;
+    }
+  
+    .input-wrapper input {
+      width: 20em;
+    }
+  
+    .label {
+      font-size: 1.5rem;
+    }
+  
+    .button {
+      font-size: 16px;
+      padding: 10px 12px;
+    }
+  
+    .img {
+      width: 50%;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h3 {
+      font-size: medium;
+    }
+  
+    .App {
+      margin-top: 1rem;
+      height: auto;
+    }
+  
+    .input-wrapper input {
+      width: 15em;
+    }
+  
+    .label {
+      font-size: 1.2rem;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  
+    .img {
+      width: 70%;
+      margin-top: 0.5rem;
+    }
+  }
+  
